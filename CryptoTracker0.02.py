@@ -1,5 +1,4 @@
 import sqlite3 as lite
-#import sys
 
 create_holdings_table = "CREATE TABLE Holdings(Coin_held TEXT, Amt_held REAL);"
 insert_user_inputted_holdings = "INSERT INTO Holdings VALUES(?, ?);"
@@ -12,15 +11,8 @@ add_0_holding = "INSERT INTO Holdings VALUES(?, ?);"
 def create_db():
     name_database = input("What would you like to name your database? (use .db extension): ")
     con = lite.connect(name_database) #DB that stores user data
-    #user_list_holdings = user_input_holdings() #List of current user holdings [(COIN1, AMT), (COIN2, AMT)]
-    #fills_CBP = user_import_transactions_CBP()
     cur = con.cursor()
-    
-    '''with con:
-        cur.execute(create_holdings_table)
-        for i in range(len(user_list_holdings)):
-            cur.execute(insert_user_inputted_holdings, (user_list_holdings[i][0], user_list_holdings[i][1]))'''
-            
+
     with con:     
         cur.execute(create_transactions_table)
         cur.execute(create_holdings_table)
