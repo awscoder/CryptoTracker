@@ -82,12 +82,17 @@ def update_transactions_and_holdings_with_CBP_fills(name_database):
         for i in range(len(fills_CBP)):
             con.commit()
             if fills_CBP[i][3] == "BUY":
-                amt_held = (get_cur_holdings(name_database, fills_CBP[i][6])) #Current holdings for the given coin
-                cur.execute(update_holdings_from_CBP_fills, ((amt_held + float(fills_CBP[i][5])), fills_CBP[i][6])) #updates holdings
+                amt_held_buying = get_cur_holdings(name_database, fills_CBP[i][6]) #Current holdings for the given coin
+                amt_held_selling = get_cur_holdings(name_database, fills_CBP[i][10])
+                cur.execute(update_holdings_from_CBP_fills, ((amt_held_buying + float(fills_CBP[i][5])), fills_CBP[i][6])) #updates holdings
+                cur.execute(update_holdings_from_CBP_fills, ((amt_held_selling + float(fills_CBP[i][9])), fills_CBP[i][10]))
                 cur.execute(insert_CBP_fills, (fills_CBP[i][4], fills_CBP[i][6], float(fills_CBP[i][5]), float(fills_CBP[i][7]), fills_CBP[i][10], float(fills_CBP[i][9]), "CBP")) #adds the tranasction to the Transaction table
             elif fills_CBP[i][3] == "SELL":
-                amt_held = float(get_cur_holdings(name_database, fills_CBP[i][10]))
-                cur.execute(update_holdings_from_CBP_fills, ((amt_held - float(fills_CBP[i][9])), fills_CBP[i][10]))
+                amt_held_selling = get_cur_holdings(name_database, fills_CBP[i][6])
+                amt_held_buying = get_cur_holdings(name_database, fills_CBP[i][10])
+
+                cur.execute(update_holdings_from_CBP_fills, ((amt_held_selling - float(fills_CBP[i][5])), fills_CBP[i][6]))
+                cur.execute(update_holdings_from_CBP_fills, ((amt_held_buying + float(fills_CBP[i][9])), fills_CBP[i][10]))               
                 cur.execute(insert_CBP_fills, (fills_CBP[i][4], fills_CBP[i][10], float(fills_CBP[i][9]), 1/(float(fills_CBP[i][7])), fills_CBP[i][6], float(fills_CBP[i][5]), "CBP"))
     
 def get_cur_holdings(name_database, coin):
