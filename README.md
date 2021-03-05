@@ -14,3 +14,11 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 5) If you have fills.csv in the same directory as this code, hit enter, if not enter the filepath.
 6) Wait approximately 1 minute
 7) Use DB browser to open your database and you can see your holdings and transaction history.
+
+*Next steps*
+1) Increase efficiency (looking at pulling data from db instead of fills after fills has been imported (84-96)
+2) This will also helpwith importing other files down the line
+3) Eventually a better interface
+4) The ability to display portfolio
+5) Track cpc
+6) Make graphs
