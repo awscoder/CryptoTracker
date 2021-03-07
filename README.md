@@ -1,4 +1,4 @@
-# CBPBookeeping
+# CryptoTracker
 A rough shot at an early version of open-source crypto accounting software for Coinbase Pro (CBP) users (written in Python)
 To view the database I recommend DB Browser (https://sqlitebrowser.org/dl/)
 
@@ -16,9 +16,9 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 7) Use DB browser to open your database and you can see your holdings and transaction history.
 
 *Next steps*
-1) Increase efficiency (looking at pulling data from db instead of fills after fills has been imported (84-96)
-2) This will also helpwith importing other files down the line
-3) Eventually a better interface
-4) The ability to display portfolio
-5) Track cpc
-6) Make graphs
+1) Enabling generic csv import from any exchange with proper formatting
+2) Eventually a better interface
+3) The ability to display portfolio
+4) Track cost-per-coin
+5) Make graphs
+6) Calculate FIFO capital gains/losses
