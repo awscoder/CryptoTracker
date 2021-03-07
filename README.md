@@ -22,3 +22,4 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 4) Track cost-per-coin
 5) Make graphs
 6) Calculate FIFO capital gains/losses
+![image](https://user-images.githubusercontent.com/38738303/110227983-fe4ac400-7ec2-11eb-8cc8-a84fe24febc1.png)
