@@ -23,6 +23,8 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 5) Column 5 should have the price per coin (coin purchased/ coin sold (e.g. BTC/USD) 
 6) Column 6 should have the coin sold (normally USD if you are buying in fiat and the cryptocurrency if you are selling crypto)
 7) Column 7 should have the amount sold of the coin from column 6
+8) Leave your headings as the top row in your csv file. THE PROGRAM REMOVES THE FIRST LINE AS IT ASSUMES IT IS HEADINGS! You will loose a transaction if you have no header row.
+9) Check your file for any irregularites such as negatives or newline characters (\n) as some exchanges add these
 
 *Next steps*
 ~~1) Generic csv importer~~
