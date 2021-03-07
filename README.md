@@ -15,9 +15,17 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 6) Wait approximately 1 minute
 7) Use DB browser to open your database and you can see your holdings and transaction history.
 
+*For generic import of any transactions make or download a csv file and follow the exact formatting provided*
+1) Column 1 should have BUY and SELL to indicate whether the order was a buy or sell order (be sure to capitalize)
+2) Column 2 should have the date is whatever format you wish
+3) Column 3 should have the coin acquired
+4) Column 4 should have the amount purchases of the coin from column 3
+5) Column 5 should have the price per coin (coin purchased/ coin sold (e.g. BTC/USD) 
+6) Column 6 should have the coin sold (normally USD if you are buying in fiat and the cryptocurrency if you are selling crypto)
+7) Column 7 should have the amount sold of the coin from column 6
+
 *Next steps*
-1) Enabling generic csv import from any exchange with proper formatting
-![image](https://user-images.githubusercontent.com/38738303/110227983-fe4ac400-7ec2-11eb-8cc8-a84fe24febc1.png)
+~~1) Generic csv importer~~
 2) Eventually a better interface
 3) The ability to display portfolio
 4) Track cost-per-coin
