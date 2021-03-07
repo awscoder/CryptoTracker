@@ -25,6 +25,8 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 7) Column 7 should have the amount sold of the coin from column 6
 8) Leave your headings as the top row in your csv file. THE PROGRAM REMOVES THE FIRST LINE AS IT ASSUMES IT IS HEADINGS! You will loose a transaction if you have no header row.
 9) Check your file for any irregularites such as negatives or newline characters (\n) as some exchanges add these
+![image](https://user-images.githubusercontent.com/38738303/110228620-2ab50f00-7ec8-11eb-897d-338d64c31cb3.png)
+
 
 *Next steps*
 ~~1) Generic csv importer~~
