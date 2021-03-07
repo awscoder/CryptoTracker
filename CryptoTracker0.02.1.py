@@ -72,6 +72,19 @@ def user_import_CBP():
 
 def user_import_BinanceUS():
     print('yoffufu')
+
+def user_generic_import_fills():
+    exch = input("What would you like to be listed as the exchange name for these transactions: ")
+    user_fills_csv = input("Enter the filename of the fills file (include .csv in name): ")
+    with open(user_fills_csv, 'r') as infile:
+        transactions = []
+        for row in infile:
+            cells = row.split(',')
+            cells = list(cells)
+            transactions.append(cells)
+    infile.close()
+    transactions = transactions[1:] #Removes the csv file's headers from the list
+    return(transactions, exch)
     
 def add_holdings_by_hand(db):
     con = lite.connect(db) #DB that stores user data
@@ -118,7 +131,9 @@ def get_cur_holdings(name_database, coin):
 
 def main(): #Testcase with CBP fills.csv
     user_database_name = create_db() #Generates the initial database with Holdings and Transactions tables
-    (formated_list_CBP, exchange) = user_import_CBP() #Lets the user import the CBP fills.csv file
-    update_transactions_and_holdings_with_formated_fills(user_database_name, formated_list_CBP, exchange)  #Takes formatted CBP data and edits the database
+    # (formated_list_CBP, exchange) = user_import_CBP() #Lets the user import the CBP fills.csv file
+    # update_transactions_and_holdings_with_formated_fills(user_database_name, formated_list_CBP, exchange)  #Takes formatted CBP data and edits the database
+    (formatted_list, exchange) = user_generic_import_fills()
+    update_transactions_and_holdings_with_formated_fills(user_database_name, formatted_list, exchange)
     
 main()
