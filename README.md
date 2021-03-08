@@ -17,7 +17,7 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 
 *For generic import of any transactions make or download a csv file and follow the exact formatting provided*
 1) Column 1 should have BUY and SELL to indicate whether the order was a buy or sell order (be sure to capitalize)
-2) Column 2 should have the date is whatever format you wish
+2) Column 2 should have the date in the **dd-mm-yyyy** format for CoinGecko price requests to function
 3) Column 3 should have the coin acquired
 4) Column 4 should have the amount purchases of the coin from column 3
 5) Column 5 should have the price per coin (coin purchased/ coin sold (e.g. BTC/USD) 
@@ -25,9 +25,9 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 7) Column 7 should have the amount sold of the coin from column 6
 8) Leave your headings as the top row in your csv file. THE PROGRAM REMOVES THE FIRST LINE AS IT ASSUMES IT IS HEADINGS! You will loose a transaction if you have no header row.
 9) Check your file for any irregularites such as negatives or newline characters (\n) as some exchanges add these
+
 **Here is an example of a generic table with example data formatted correctly**
 ![image](https://user-images.githubusercontent.com/38738303/110228685-9d25ef00-7ec8-11eb-9642-c54bf17bdb00.png)
-
 
 
 *Next steps*
