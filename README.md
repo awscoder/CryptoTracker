@@ -27,7 +27,7 @@ sell crypto and have never added or withdrawn crypto via the blockchain.
 9) Check your file for any irregularites such as negatives or newline characters (\n) as some exchanges add these
 
 **Here is an example of a generic table with example data formatted correctly**
-![image](https://user-images.githubusercontent.com/38738303/110228685-9d25ef00-7ec8-11eb-9642-c54bf17bdb00.png)
+![image](https://user-images.githubusercontent.com/38738303/110361974-50e0c900-8006-11eb-828f-07781c3aceb1.png)
 
 
 *Next steps*
